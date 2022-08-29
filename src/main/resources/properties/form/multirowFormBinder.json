@@ -1,0 +1,18 @@
+[{
+    title : '@@form.mulitrowformbinder.config@@',
+    properties : [{
+        name:'formDefId',
+        label:'@@form.mulitrowformbinder.formId@@',
+        type:'selectbox',
+        options_ajax:'[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options',
+        required : 'False'
+    },
+    {
+        name : 'foreignKey',
+        label : '@@form.mulitrowformbinder.foreignKey@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options',
+        required : 'False'
+    }]
+}]
